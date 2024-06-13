@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Search App</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1 id="title">Pokemon Search App</h1>
+    <form role="search" class="search-form" id="search-form">
+      <label for="search-input">Search for Pokémon Name or ID:</label>
+      <input type="text" name="pokemon" id="search-input" required />
+      <button id="search-button">Submit</button>
+    </form>
+    <div class="card-container">
+      <p>@2023 Pokemon / Nintendo / Creatures / GAME FREAK</p>
+      <div class="pokemon-data">
+        <div class="name-container">
+          <div id="card-type" class="card-type">BASIC</div>
+          <div class="pokemon-name" id="pokemon-name"></div>
+          <div class="hp" id="hp"></div>
+        </div>
+        <div class="sprite-container" id="sprite-container"></div>
+        <div class="physical-attribute" id="physical-attribute">
+          <div class="pokemon-id" id="pokemon-id"></div>
+          <div class="types" id="types"></div>
+          <div class="weight" id="weight"></div>
+          <div class="height" id="height"></div>
+        </div>
+        <div class="skill-attribute" id="skill-attribute">
+          <div class="attack" id="attack"></div>
+          <div class="defense" id="defense"></div>
+          <div class="special-attack" id="special-attack"></div>
+          <div class="special-defense" id="special-defense"></div>
+          <div class="speed" id="speed"></div>
+        </div>
+        <div id="bar-one" class="bar-one"></div>
+        <div id="bar-two" class="bar-two"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+#header {
+  top: 0;
+  width: 100vw;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+}
+
+.logo {
+  width: 200px; /* Set the width of the image container */
+  height: 100px; /* Set the height of the image container */
+}
+
+.logo img {
+  width: 100%; /* Make the image wider to cover the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover;
+}
+
+#nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  font-weight: 600;
+}
+
+#nav-bar .nav-link {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+#nav-bar .nav-link:hover {
+  color: orange; /* Change text color on hover */
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+#features {
+  margin-top: 150px;
+}
+
+.grid {
+  display: flex;
+}
+
+.grid:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+#features .icon {
+  font-size: 50px;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#features .desc {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  padding: 5px;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  border: 2px solid #ddd; /* Add a border */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  transition: box-shadow 0.3s ease; /* Add a smooth transition */
+}
+
+iframe:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
+.product {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+}
+
+.product .level {
+  background-color: #ddd;
+  width: 100%;
+  padding: 15px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product h2 {
+  margin-top: 15px;
+}
+
+.product p {
+  width: 250px;
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+.product button {
+  margin-top: auto; /* Align button to the bottom */
+  margin-bottom: 15px; /* Add some space below the button */
+  background-color: orange;
+  border: none;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: rgb(188, 125, 0); /* Darken button on hover */
+}
+
+/* CSS for form container */
+#subscription {
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for form */
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS for input fields */
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#submit {
+  background-color: #007bff;
+  border: none;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+/* CSS for footer */
+footer {
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-right: 10px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+footer ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Add this CSS to your stylesheet */
+
+/* Mobile-first styles */
+@media only screen and (max-width: 600px) {
+  /* Adjust header styles for smaller screens */
+  #header {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    padding: 10px; /* Add padding */
+  }
+
+  .logo {
+    display: none;
+  }
+
+  #nav-bar {
+    grid-template-columns: 1fr 1fr 1fr; /* Change to a single column layout */
+    justify-items: center; /* Center align the navigation items */
+  }
+
+  #nav-bar .nav-link {
+    margin: 5px 0; /* Add space between the navigation items */
+  }
+
+  /* Adjust features section for smaller screens */
+  #features {
+    margin-top: 50px;
+  }
+
+  .grid {
+    flex-direction: column; /* Change to a single column layout */
+    align-items: center; /* Center align the items */
+  }
+
+  .grid:hover {
+    transform: none; /* Remove scaling on hover */
+    box-shadow: none; /* Remove shadow on hover */
+  }
+
+  /* Adjust pricing section for smaller screens */
+  #pricing {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 80%; /* Make the products wider */
+    margin: 10px 0; /* Add space between the products */
+  }
+
+  .product button {
+    margin: 15px 0;
+  }
+
+  /* Adjust form container for smaller screens */
+  #subscription {
+    margin: 20px auto; /* Add margin to center */
+  }
+
+  /* Adjust footer styles for smaller screens */
+  footer ul {
+    justify-content: center; /* Center align the list items */
+  }
+
+  footer ul li {
+    margin-right: 5px;
+  }
+
+  footer span {
+    justify-content: center;
+  }
+}
+
+/* Tablet and larger screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust header styles for larger screens */
+  #header {
+    padding: 10px; /* Increase padding */
+  }
+
+  /* Adjust features section for larger screens */
+  #features {
+    margin-top: 100px; /* Increase margin top */
+  }
+
+  /* Adjust pricing section for larger screens */
+  #pricing {
+    height: 400px; /* Set fixed height */
+    flex-direction: row; /* Change back to row layout */
+    justify-content: space-around; /* Distribute items evenly */
+  }
+
+  .product {
+    width: 30%; /* Set fixed width for products */
+    margin: 0; /* Remove margin */
+  }
+
+  .product .level {
+    padding: 15px 50px;
+  }
+
+  .product p {
+    width: 200px;
+    line-height: 25px;
+    padding: 0 20px;
+    margin-top: 5px;
+  }
+
+  /* Adjust form container for larger screens */
+  #subscription {
+    max-width: 400px; /* Increase maximum width */
+  }
+}

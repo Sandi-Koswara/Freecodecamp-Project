@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b67439c852.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Guitar Hero</title>
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <header id="header">
+        <div class="logo">
+          <img
+            src="https://media.istockphoto.com/id/1383028683/vector/guitar-music-instrument-logo-fit-for-music-logo-template-vector-illustration-flat-color-style.jpg?s=612x612&w=0&k=20&c=GwTF38LXjONaMD4xo2GqE8GAEmBfiqckkK5sNxljGeI="
+            id="header-img"
+          />
+        </div>
+        <nav id="nav-bar">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+        </nav>
+      </header>
+      <div class="container">
+        <section id="features">
+          <div class="grid">
+            <div class="icon"><i class="fa-regular fa-thumbs-up"></i></div>
+            <div class="desc">
+              <h2>Best Quality</h2>
+              <p>
+                Crafted with precision and passion, our guitars are made from
+                hand-selected tonewoods and feature expert craftsmanship for
+                exceptional tone and playability.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="desc">
+              <h2>Fast Shipping</h2>
+              <p>
+                We offer fast and reliable shipping options, with each guitar
+                carefully packaged for protection to ensure it arrives in
+                perfect condition.
+              </p>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="icon"><i class="fa-solid fa-medal"></i></div>
+            <div class="desc">
+              <h2>Premium Materials</h2>
+              <p>
+                Built to last a lifetime, our guitars are made from the finest
+                materials like solid spruce, mahogany, and rosewood, with
+                innovative features enhancing their resonance and durability.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="how-it-works">
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/foIPN-T7RGo?si=qYYloMCmTWUApXcI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </section>
+        <section id="pricing">
+          <div class="product" id="steel-string">
+            <div class="level">Steel-String Acoustic Guitar</div>
+            <h2>$300</h2>
+            <p>
+              Featuring steel strings for a bright and versatile sound, this
+              guitar is suitable for various playing styles, from strumming to
+              fingerpicking.
+            </p>
+            <button class="btn">Select</button>
+          </div>
+          <div class="product" id="classical">
+            <div class="level">Classical Acoustic Guitar</div>
+            <h2>$400</h2>
+            <p>
+              With nylon strings and a warm, mellow tone, this guitar is ideal
+              for classical and fingerstyle players looking for a traditional
+              sound.
+            </p>
+            <button class="btn">Select</button>
+          </div>
+          <div class="product" id="parlor">
+            <div class="level">Parlor Acoustic Guitar</div>
+            <h2>$500</h2>
+            <p>
+              Known for its smaller size and vintage sound, this guitar offers a
+              unique, balanced tone that is well-suited for folk and blues
+              music.
+            </p>
+            <button class="btn">Select</button>
+          </div>
+        </section>
+        <section id="subscription">
+          <p>Access to articles, briefings, and newsletters.</p>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <input id="submit" type="submit" value="Get Started" class="btn" />
+          </form>
+        </section>
+        <footer>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <span>Copyright 2024, Guitar Hero</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

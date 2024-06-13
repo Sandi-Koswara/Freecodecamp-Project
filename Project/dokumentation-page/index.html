@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Archivo Narrow' rel='stylesheet'>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Schrödinger equation</title>
+  </head>
+  <body>
+    <div id="header-container">
+    <a href="/wiki/Main_Page" class="mw-logo">
+      <img class="globe-logo" src="https://en.wikipedia.org/static/images/icons/wikipedia.png" alt="Wikipedia Logo" aria-hidden="true" height="50" width="50">
+      <span class="mw-logo-container">
+        <img class="mw-logo-wordmark" alt="Wikipedia" src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg" style="width: 7.5em; height: 1.125em;">
+        <img class="mw-logo-tagline" alt="The Free Encyclopedia" src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg" width="117" height="13" style="width: 7.3125em; height: 0.81253m;">
+        </span>
+    </a>
+    <form id="searching" action="https://en.wikipedia.org/wiki/Special:Search" method="get" target="_blank">
+    <div class="search-container">
+      <input type="text" name="search" placeholder="&#128269 Search Wikipedia...">
+      <button type="submit">Search</button>
+    </div>
+    </form>
+    </div>
+    <div id="wrapping">
+      <nav id="navbar">
+        <header>Contents</header>
+        <ul>
+          <li>
+            <a class="nav-link" href="#schrödinger_equation">Schrödinger equation</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#definition">Definition</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#properties">Properties</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#examples">Examples</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#interpretation">Interpretation</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#references">References</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main id="main-doc">
+      <section class="main-section" id="schrödinger_equation">
+        <header>Schrödinger equation</header>
+        <article>
+          <p>The Schrödinger equation is a linear partial differential equation that governs the wave function of a quantum-mechanical system.<sup><a href="#ref1">[1]</a></sup>  Its discovery was a significant landmark in the development of quantum mechanics. It is named after Erwin Schrödinger, who postulated the equation in 1925 and published it in 1926, forming the basis for the work that resulted in his Nobel Prize in Physics in 1933.<sup><a href="#ref2">[2]</a></sup><sup><a href="#ref3">[3]</a></sup></p>
+          <p>Conceptually, the Schrödinger equation is the quantum counterpart of Newton's second law in classical mechanics. Given a set of known initial conditions, Newton's second law makes a mathematical prediction as to what path a given physical system will take over time. The Schrödinger equation gives the evolution over time of a wave function, the quantum-mechanical characterization of an isolated physical system. The equation was postulated by Schrödinger based on a postulate of Louis de Broglie that all matter has an associated matter wave. The equation predicted bound states of the atom in agreement with experimental observations.<sup><a href="#ref4">[4]</a></sup> </p>
+          <p>The Schrödinger equation is not the only way to study quantum mechanical systems and make predictions. Other formulations of quantum mechanics include matrix mechanics, introduced by Werner Heisenberg, and the path integral formulation, developed chiefly by Richard Feynman. When these approaches are compared, the use of the Schrödinger equation is sometimes called "wave mechanics". Paul Dirac incorporated special relativity and quantum mechanics into a single formulation that simplifies to the Schrödinger equation when relativistic effects are not significant.</p>
+        </article>
+      </section>
+      <section class="main-section" id="definition">
+        <header>Definition</header>
+        <article>
+          <h3>Preliminaries</h3>
+          <p>Introductory courses on physics or chemistry typically introduce the Schrödinger equation in a way that can be appreciated knowing only the concepts and notations of basic calculus, particularly derivatives with respect to space and time. A special case of the Schrödinger equation that admits a statement in those terms is the position-space Schrödinger equation for a single nonrelativistic particle in one dimension:</p>
+          <p>\[i\hbar\frac{\partial}{\partial t}\psi(x,t) = \bigg[-\frac{\hbar}{2m}\frac{\partial^2}{\partial x^2} + V(x,t)\bigg]\psi(x,t)\]</p>
+          <p>Here, \(\psi(x,t)\) is a wave function, a function that assigns a complex number to each point \(x\) at each time \(t\). The parameter \(m\) is the mass of the particle, and \(V(x,t)\) is the <code>potential</code> that represents the environment in which the particle exists.<sup><a href="#ref5">[5]</a></sup>   The constant \(i\) is the imaginary unit, and \(\hbar\) is the reduced Planck constant, which has units of action (energy multiplied by time).<sup><a href="#ref5">[5]</a></sup>  </p>
+          <p>Broadening beyond this simple case, the mathematical formulation of quantum mechanics developed by Paul Dirac,<sup><a href="#ref6">[6]</a></sup>  David Hilbert,<sup><a href="#ref7">[7]</a></sup>  John von Neumann,<sup><a href="#ref8">[8]</a></sup>  and Hermann Weyl<sup><a href="#ref9">[9]</a></sup>  defines the state of a quantum mechanical system to be a vector \(|\psi\rangle\) belonging to a (separable) Hilbert space \(\mathcal{H}\). This vector is postulated to be normalized under the Hilbert space's inner product, that is, in Dirac notation it obeys \(\langle \psi | \psi \rangle = 1 \). The exact nature of this Hilbert space is dependent on the system – for example, for describing position and momentum, the Hilbert space is the space of complex square-integrable functions \(L^2(\mathbb{C})\),<sup><a href="#ref10">[10]</a></sup>  while the Hilbert space for the spin of a single proton is simply the space of two-dimensional complex vectors \(\mathbb {C}^{2}\) with the usual inner product.<sup><a href="#ref11">[11]</a></sup></p>
+          <p>Physical quantities of interest – position, momentum, energy, spin – are represented by "observables", which are Hermitian (more precisely, self-adjoint) linear operators acting on the Hilbert space. A wave function can be an eigenvector of an observable, in which case it is called an eigenstate, and the associated eigenvalue corresponds to the value of the observable in that eigenstate. More generally, a quantum state will be a linear combination of the eigenstates, known as a quantum superposition. When an observable is measured, the result will be one of its eigenvalues with probability given by the Born rule: in the simplest case the eigenvalue \(\lambda\) is non-degenerate and the probability is given by \(|\langle \lambda | \psi \rangle |^2 \), where \(| \lambda \rangle \) is its associated eigenvector. More generally, the eigenvalue is degenerate and the probability is given by \(\langle \psi | P_{\lambda} | \psi \rangle \), where \(P_{\lambda}\) is the projector onto its associated eigenspace.</p>
+          <p>A momentum eigenstate would be a perfectly monochromatic wave of infinite extent, which is not square-integrable. Likewise a position eigenstate would be a <code>Dirac delta distribution</code>, not square-integrable and technically not a function at all. Consequently, neither can belong to the particle's Hilbert space. Physicists sometimes introduce fictitious "bases" for a Hilbert space comprising elements outside that space. These are invented for calculational convenience and do not represent physical states.<sup><a href="#ref11">[11]</a></sup>   Thus, a position-space wave function \(\psi (x,t)\) as used above can be written as the inner product of a time-dependent state vector \(| \psi (t) \rangle \) with unphysical but convenient "position eigenstates" \(|x \rangle\):</p>
+          <p>\[ \Psi (x,t)=\langle x|\Psi (t)\rangle .\]</p>
+        </article>
+      </section>
+      <section class="main-section" id="properties">
+        <header>Properties</header>
+        <article>
+          <h3>Linearity</h3>
+          <p>The Schrödinger equation is a linear differential equation, meaning that if two state vectors 
+\(|\psi_{1}\rangle\) and \(|\psi_{2}\rangle\) are solutions, then so is any linear combination
+\[|\psi\rangle = a|\psi_{1}\rangle + b|\psi_{2}\rangle\]
+of the two state vectors where <code>a</code> and <code>b</code> are any complex numbers.<sup><a href="#ref13">[13]</a></sup> Moreover, the sum can be extended for any number of state vectors. This property allows superpositions of quantum states to be solutions of the Schrödinger equation. Even more generally, it holds that a general solution to the Schrödinger equation can be found by taking a weighted sum over a basis of states. A choice often employed is the basis of energy eigenstates, which are solutions of the time-independent Schrödinger equation. In this basis, a time-dependent state vector \(|\Psi(t)\rangle\) can be written as the linear combination
+\[|\Psi(t)\rangle = \sum_{n}A_{n}e^{{-iE_{n}t/}\hbar}|\psi _{E_{n}}\rangle, \]
+where \(A_{n}\) are complex numbers and the vectors \(|\psi _{E{n}}\rangle \) are solutions of the time-independent equation \(\hat {H}|\psi _{E_{n}}\rangle = E_{n}|\psi _{E_{n}}\rangle \).</p>
+        </article>
+      </section>
+      <section class="main-section" id="examples">
+        <header>Examples</header>
+        <article>
+          <h3>Particle in a box</h3>
+          <p>The particle in a one-dimensional potential energy box is the most mathematically simple example where restraints lead to the quantization of energy levels. The box is defined as having zero potential energy inside a certain region and infinite potential energy outside.<sup><a href="#ref11">[11]</a></sup> For the one-dimensional case in the <code>x</code> direction, the time-independent Schrödinger equation may be written
+\[-\frac {\hbar ^{2}}{2m}{\frac {d^{2}\psi }{dx^{2}}}= E\psi .\]
+With the differential operator defined by
+\[\hat {p}_{x} = -i\hbar {\frac {d}{dx}}\]
+the previous equation is evocative of the classic kinetic energy analogue,
+\[\frac {1}{2m}{\hat {p}}_{x}^{2} = E,\]
+with state \(\psi\) in this case having energy \(E\) coincident with the kinetic energy of the particle. The general solutions of the Schrödinger equation for the particle in a box are
+\[\psi(x) = Ae^{ikx} + Be^{-ikx} \qquad \qquad E = \frac {\hbar ^{2}k^{2}}{2m}\] 
+or, from Euler's formula,
+\[\psi(x) = C \sin(kx) + D \cos(kx).\]
+The infinite potential walls of the box determine the values of \(C,D\) and \(k\) at \(x = 0\) and \(x = L\) where \(\psi\) must be zero. Thus, at \(x=0\),
+\[\psi(0) = 0 = C\sin(0) + D\cos(0) = D\]
+and \(D = 0\) at \(x = L\),
+\[\psi(L) = 0 = C\sin(kL),\]
+in which \(C\) cannot be zero as this would conflict with the postulate that \(\psi\) has norm 1. Therefore, since \(\sin(kL) = 0\),must be an integer multiple of \(\pi\),
+\[ k={\frac {n\pi }{L}}\qquad \qquad n=1,2,3,\ldots \]
+This constraint on \(k\) implies a constraint on the energy levels, yielding
+\[E_{n}={\frac {\hbar ^{2}\pi ^{2}n^{2}}{2mL^{2}}} = {\frac {n^{2}h^{2}}{8mL^{2}}}.\]
+A finite potential well is the generalization of the infinite potential well problem to potential wells having finite depth. The finite potential well problem is mathematically more complicated than the infinite particle-in-a-box problem as the wave function is not pinned to zero at the walls of the well. Instead, the wave function must satisfy more complicated mathematical boundary conditions as it is nonzero in regions outside the well. Another related problem is that of the rectangular potential barrier, which furnishes a model for the quantum tunneling effect that plays an important role in the performance of modern technologies such as flash memory and scanning tunneling microscopy.</p>
+        </article>
+      </section>
+      <section class="main-section" id="interpretation">
+        <header>Interpretation</header>
+        <article>
+          <p>The Schrödinger equation provides a way to calculate the wave function of a system and how it changes dynamically in time. However, the Schrödinger equation does not directly say what, exactly, the wave function is. The meaning of the Schrödinger equation and how the mathematical entities in it relate to physical reality depends upon the interpretation of quantum mechanics that one adopts.</p>
+          <p>In the views often grouped together as the Copenhagen interpretation, a system's wave function is a collection of statistical information about that system. The Schrödinger equation relates information about the system at one time to information about it at another. While the time-evolution process represented by the Schrödinger equation is continuous and deterministic, in that knowing the wave function at one instant is in principle sufficient to calculate it for all future times, wave functions can also change discontinuously and stochastically during a measurement. The wave function changes, according to this school of thought, because new information is available. The post-measurement wave function generally cannot be known prior to the measurement, but the probabilities for the different possibilities can be calculated using the Born rule.<sup><a href="#ref25">[25]</a></sup><sup><a href="#ref50">[50]</a></sup> Other, more recent interpretations of quantum mechanics, such as relational quantum mechanics and QBism also give the Schrödinger equation a status of this sort.<sup><a href="#ref53">[53]</a></sup><sup><a href="#ref54">[54]</a></sup></p>
+          <p>Schrödinger himself suggested in 1952 that the different terms of a superposition evolving under the Schrödinger equation are "not alternatives but all really happen simultaneously". This has been interpreted as an early version of Everett's many-worlds interpretation.<sup><a href="#ref55">[55]</a></sup><sup><a href="#ref56">[56]</a></sup> This interpretation, formulated independently in 1956, holds that all the possibilities described by quantum theory simultaneously occur in a multiverse composed of mostly independent parallel universes.<sup><a href="#ref58">[58]</a></sup> This interpretation removes the axiom of wave function collapse, leaving only continuous evolution under the Schrödinger equation, and so all possible states of the measured system and the measuring apparatus, together with the observer, are present in a real physical quantum superposition. While the multiverse is deterministic, we perceive non-deterministic behavior governed by probabilities, because we do not observe the multiverse as a whole, but only one parallel universe at a time. Exactly how this is supposed to work has been the subject of much debate. Why we should assign probabilities at all to outcomes that are certain to occur in some worlds, and why should the probabilities be given by the Born rule?<sup><a href="#ref59">[59]</a></sup> Several ways to answer these questions in the many-worlds framework have been proposed, but there is no consensus on whether they are successful.<sup><a href="#ref60">[60]</a></sup><sup><a href="#ref61">[61]</a></sup><sup><a href="#ref62">[62]</a></sup></p>
+          <p>Bohmian mechanics reformulates quantum mechanics to make it deterministic, at the price of making it explicitly nonlocal (a price exacted by Bell's theorem). It attributes to each physical system not only a wave function but in addition a real position that evolves deterministically under a nonlocal guiding equation. The evolution of a physical system is given at all times by the Schrödinger equation together with the guiding equation.<sup><a href="#ref63">[63]</a></sup></p>
+        </article>
+      </section>
+      <section class="main-section" id="references">
+        <header>References</header>
+        <ol>
+          <li id="ref1">Griffiths, David J. (2004). Introduction to Quantum Mechanics (2nd ed.). Prentice Hall. ISBN 978-0-13-111892-8.</li>
+          <li id="ref2">"Physicist Erwin Schrödinger's Google doodle marks quantum mechanics work". The Guardian. 13 August 2013. Retrieved 25 August 2013.</li>
+          <li id="ref3">Schrödinger, E. (1926). "An Undulatory Theory of the Mechanics of Atoms and Molecules" (PDF). Physical Review. 28 (6): 1049–70. Bibcode:1926PhRv...28.1049S. doi:10.1103/PhysRev.28.1049. Archived from the original (PDF) on 17 December 2008.</li>
+          <li id="ref4">Whittaker, Edmund T. (1989). A history of the theories of aether & electricity. 2: The modern theories, 1900 – 1926 (Repr ed.). New York: Dover Publ. ISBN 978-0-486-26126-3.</li>
+          <li id="ref5">Zwiebach, Barton (2022). Mastering Quantum Mechanics: Essentials, Theory, and Applications. MIT Press. ISBN 978-0-262-04613-8. OCLC 1347739457.</li>
+          <li id="ref6">Dirac, Paul Adrien Maurice (1930). The Principles of Quantum Mechanics. Oxford: Clarendon Press.</li>
+          <li id="ref7">Hilbert, David (2009). Sauer, Tilman; Majer, Ulrich (eds.). Lectures on the Foundations of Physics 1915–1927: Relativity, Quantum Theory and Epistemology. Springer. doi:10.1007/b12915. ISBN 978-3-540-20606-4. OCLC 463777694.</li>
+          <li id="ref8">von Neumann, John (1932). Mathematische Grundlagen der Quantenmechanik. Berlin: Springer. English translation: Mathematical Foundations of Quantum Mechanics. Translated by Beyer, Robert T. Princeton University Press. 1955.</li>
+          <li id="ref9">Weyl, Hermann (1950) [1931]. The Theory of Groups and Quantum Mechanics. Translated by Robertson, H. P. Dover. ISBN 978-0-486-60269-1. Translated from the German Gruppentheorie und Quantenmechanik (2nd ed.). S. Hirzel Verlag [de]. 1931.</li>
+          <li id="ref10">Samuel S. Holland (2012). Applied Analysis by the Hilbert Space Method: An Introduction with Applications to the Wave, Heat, and Schrödinger Equations (herdruk ed.). Courier Corporation. p. 190. ISBN 978-0-486-13929-6. Extract of page 190</li>
+          <li id="ref11">Cohen-Tannoudji, Claude; Diu, Bernard; Laloë, Franck (2005). Quantum Mechanics. Translated by Hemley, Susan Reid; Ostrowsky, Nicole; Ostrowsky, Dan. John Wiley & Sons. ISBN 0-471-16433-X.</li>
+          <li id="ref12">Shankar, R. (1994). Principles of Quantum Mechanics (2nd ed.). Kluwer Academic/Plenum Publishers. ISBN 978-0-306-44790-7.</li>
+          <li id="ref13">Rieffel, Eleanor G.; Polak, Wolfgang H. (4 March 2011). Quantum Computing: A Gentle Introduction. MIT Press. ISBN 978-0-262-01506-6.</li>
+          <li id="ref14">Yaffe, Laurence G. (2015). "Chapter 6: Symmetries" (PDF). Physics 226: Particles and Symmetries. Retrieved 1 January 2021.</li>
+          <li id="ref15">Sakurai, J. J.; Napolitano, J. (2017). Modern Quantum Mechanics (Second ed.). Cambridge: Cambridge University Press. p. 68. ISBN 978-1-108-49999-6. OCLC 1105708539.</li>
+          <li id="ref16">Sakurai, Jun John; Napolitano, Jim (2021). Modern quantum mechanics (3rd ed.). Cambridge: Cambridge University Press. ISBN 978-1-108-47322-4.</li>
+          <li id="ref17">Mostafazadeh, Ali (7 January 2003). "Hilbert Space Structures on the Solution Space of Klein-Gordon Type Evolution Equations". Classical and Quantum Gravity. 20 (1): 155–171. arXiv:math-ph/0209014. doi:10.1088/0264-9381/20/1/312. ISSN 0264-9381.</li>
+          <li id="ref18">Singh, Chandralekha (March 2008). "Student understanding of quantum mechanics at the beginning of graduate instruction". American Journal of Physics. 76 (3): 277–287. arXiv:1602.06660. Bibcode:2008AmJPh..76..277S. doi:10.1119/1.2825387. ISSN 0002-9505. S2CID 118493003.</li>
+          <li id="ref19">Adams, C.S; Sigel, M; Mlynek, J (1994). "Atom optics". Physics Reports. Elsevier BV. 240 (3): 143–210. Bibcode:1994PhR...240..143A. doi:10.1016/0370-1573(94)90066-3. ISSN 0370-1573.</li>
+          <li id="ref20">Atkins, P. W. (1978). Physical Chemistry. Oxford University Press. ISBN 0-19-855148-7.</li>
+          <li id="ref21">Hook, J. R.; Hall, H. E. (2010). Solid State Physics. Manchester Physics Series (2nd ed.). John Wiley & Sons. ISBN 978-0-471-92804-1.</li>
+          <li id="ref22">Townsend, John S. (2012). "Chapter 7: The One-Dimensional Harmonic Oscillator". A Modern Approach to Quantum Mechanics. University Science Books. pp. 247–250, 254–5, 257, 272. ISBN 978-1-891389-78-8.</li>
+          <li id="ref23">Tipler, P. A.; Mosca, G. (2008). Physics for Scientists and Engineers – with Modern Physics (6th ed.). Freeman. ISBN 978-0-7167-8964-2.</li>
+          <li id="ref24">Griffiths, David J. (2008). Introduction to Elementary Particles. Wiley-VCH. pp. 162–. ISBN 978-3-527-40601-2. Retrieved 27 June 2011.</li>
+          <li id="ref25">Peres, Asher (1993). Quantum Theory: Concepts and Methods. Kluwer. ISBN 0-7923-2549-4. OCLC 28854083.</li>
+          <li id="ref26">Breuer, Heinz; Petruccione, Francesco (2002). The theory of open quantum systems. Oxford University Press. p. 110. ISBN 978-0-19-852063-4.</li>
+          <li id="ref27">Schwabl, Franz (2002). Statistical mechanics. Springer. p. 16. ISBN 978-3-540-43163-3.</li>
+          <li id="ref28">Home, Dipankar (2013). Conceptual Foundations of Quantum Physics. Springer US. pp. 4–5. ISBN 9781475798081. OCLC 1157340444.</li>
+          <li id="ref29">Coleman, Sidney (8 November 2018). Derbes, David; Ting, Yuan-sen; Chen, Bryan Gin-ge; Sohn, Richard; Griffiths, David; Hill, Brian (eds.). Lectures Of Sidney Coleman On Quantum Field Theory. World Scientific Publishing. ISBN 978-9-814-63253-9. OCLC 1057736838.</li>
+          <li id="ref30">Symanzik, K. (6 July 1981). "Schrödinger representation and Casimir effect in renormalizable quantum field theory". Nuclear Physics B. 190 (1): 1–44. Bibcode:1981NuPhB.190....1S. doi:10.1016/0550-3213(81)90482-X. ISSN 0550-3213.</li>
+          <li id="ref31">Kiefer, Claus (15 March 1992). "Functional Schrödinger equation for scalar QED". Physical Review D. 45 (6): 2044–2056. Bibcode:1992PhRvD..45.2044K. doi:10.1103/PhysRevD.45.2044. ISSN 0556-2821. PMID 10014577.</li>
+          <li id="ref32">Hatfield, Brian (1992). Quantum Field Theory of Point Particles and Strings. Cambridge, Mass.: Perseus Books. ISBN 978-1-4294-8516-6. OCLC 170230278.</li>
+          <li id="ref33">Islam, Jamal Nazrul (May 1994). "The Schrödinger equation in quantum field theory". Foundations of Physics. 24 (5): 593–630. Bibcode:1994FoPh...24..593I. doi:10.1007/BF02054667. ISSN 0015-9018. S2CID 120883802.</li>
+          <li id="ref34">Srednicki, Mark Allen (2012). Quantum Field Theory. Cambridge: Cambridge University Press. ISBN 978-0-521-86449-7. OCLC 71808151.</li>
+          <li id="ref35">de Broglie, L. (1925). "Recherches sur la théorie des quanta" [On the Theory of Quanta] (PDF). Annales de Physique (in French). 10 (3): 22–128. Bibcode:1925AnPh...10...22D. doi:10.1051/anphys/192510030022. Archived from the original (PDF) on 9 May 2009.</li>
+          <li id="ref36">Weissman, M. B.; V. V. Iliev; I. Gutman (2008). "A pioneer remembered: biographical notes about Arthur Constant Lunn" (PDF). Communications in Mathematical and in Computer Chemistry. 59 (3): 687–708.</li>
+          <li id="ref37">Samuel I. Weissman; Michael Weissman (1997). "Alan Sokal's Hoax and A. Lunn's Theory of Quantum Mechanics". Physics Today. 50 (6): 15. Bibcode:1997PhT....50f..15W. doi:10.1063/1.881789.</li>
+          <li id="ref38">Kamen, Martin D. (1985). Radiant Science, Dark Politics. Berkeley and Los Angeles, California: University of California Press. pp. 29–32. ISBN 978-0-520-04929-1.</li>
+          <li id="ref39">Schrödinger, E. (1984). Collected papers. Friedrich Vieweg und Sohn. ISBN 978-3-7001-0573-2. See introduction to first 1926 paper.</li>
+          <li id="ref40">Lerner, R. G.; Trigg, G. L. (1991). Encyclopaedia of Physics (2nd ed.). VHC publishers. ISBN 0-89573-752-3.</li>
+          <li id="ref41">Sommerfeld, A. (1919). Atombau und Spektrallinien (in German). Braunschweig: Friedrich Vieweg und Sohn. ISBN 978-3-87144-484-5.</li>
+          <li id="ref42">For an English source, see Haar, T. (1967). The Old Quantum Theory. Oxford, New York: Pergamon Press.</li>
+          <li id="ref43">Teresi, Dick (7 January 1990). "The Lone Ranger of Quantum Mechanics". The New York Times. ISSN 0362-4331. Retrieved 13 October 2020.</li>
+          <li id="ref44">Schrödinger, Erwin (1982). Collected Papers on Wave Mechanics (3rd ed.). American Mathematical Society. ISBN 978-0-8218-3524-1.</li>
+          <li id="ref45">Schrödinger, E. (1926). "Quantisierung als Eigenwertproblem; von Erwin Schrödinger". Annalen der Physik (in German). 384 (4): 361–377. Bibcode:1926AnP...384..361S. doi:10.1002/andp.19263840404.</li>
+          <li id="ref46">Moore, W. J. (1992). Schrödinger: Life and Thought. Cambridge University Press. ISBN 978-0-521-43767-7.</li>
+          <li id="ref47">Jammer, Max (1974). Philosophy of Quantum Mechanics: The interpretations of quantum mechanics in historical perspective. Wiley-Interscience. ISBN 9780471439585.</li>
+          <li id="ref48">Karam, Ricardo (June 2020). "Schrödinger's original struggles with a complex wave function". American Journal of Physics. 88 (6): 433–438. Bibcode:2020AmJPh..88..433K. doi:10.1119/10.0000852. ISSN 0002-9505. S2CID 219513834.</li>
+          <li id="ref49">Erwin Schrödinger, "The Present situation in Quantum Mechanics", p. 9 of 22. The English version was translated by John D. Trimmer. The translation first appeared first in Proceedings of the American Philosophical Society, 124, 323–338. It later appeared as Section I.11 of Part I of Quantum Theory and Measurement by J. A. Wheeler and W. H. Zurek, eds., Princeton University Press, New Jersey 1983, ISBN 0691083169.</li>
+          <li id="ref50">Omnès, R. (1994). The Interpretation of Quantum Mechanics. Princeton University Press. ISBN 978-0-691-03669-4. OCLC 439453957.</li>
+          <li id="ref51">Faye, Jan (2019). "Copenhagen Interpretation of Quantum Mechanics". In Zalta, Edward N. (ed.). Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University.</li>
+          <li id="ref52">Chevalley, Catherine (1999). "Why Do We Find Bohr Obscure?". In Greenberger, Daniel; Reiter, Wolfgang L.; Zeilinger, Anton (eds.). Epistemological and Experimental Perspectives on Quantum Physics. Springer Science+Business Media. pp. 59–74. doi:10.1007/978-94-017-1454-9. ISBN 978-9-04815-354-1.</li>
+          <li id="ref53">van Fraassen, Bas C. (April 2010). "Rovelli's World". Foundations of Physics. 40 (4): 390–417. Bibcode:2010FoPh...40..390V. doi:10.1007/s10701-009-9326-5. ISSN 0015-9018. S2CID 17217776.</li>
+          <li id="ref54">Healey, Richard (2016). "Quantum-Bayesian and Pragmatist Views of Quantum Theory". In Zalta, Edward N. (ed.). Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University.</li>
+          <li id="ref55">Deutsch, David (2010). "Apart from Universes". In S. Saunders; J. Barrett; A. Kent; D. Wallace (eds.). Many Worlds? Everett, Quantum Theory and Reality. Oxford University Press.</li>
+          <li id="ref56">Schrödinger, Erwin (1996). Bitbol, Michel (ed.). The Interpretation of Quantum Mechanics: Dublin Seminars (1949–1955) and other unpublished essays. OxBow Press.</li>
+          <li id="ref57">Bitbol, Michel (1996). Schrödinger's Philosophy of Quantum Mechanics. Dordrecht: Springer Netherlands. ISBN 978-94-009-1772-9. OCLC 851376153.</li>
+          <li id="ref58">Barrett, Jeffrey (2018). "Everett's Relative-State Formulation of Quantum Mechanics". In Zalta, Edward N. (ed.). Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University.</li>
+          <li id="ref59">Wallace, David (2003). "Everettian Rationality: defending Deutsch's approach to probability in the Everett interpretation". Stud. Hist. Phil. Mod. Phys. 34 (3): 415–438. arXiv:quant-ph/0303050. Bibcode:2003SHPMP..34..415W. doi:10.1016/S1355-2198(03)00036-4. S2CID 1921913.</li>
+          <li id="ref60">Ballentine, L. E. (1973). "Can the statistical postulate of quantum theory be derived?—A critique of the many-universes interpretation". Foundations of Physics. 3 (2): 229–240. Bibcode:1973FoPh....3..229B. doi:10.1007/BF00708440. S2CID 121747282.</li>
+          <li id="ref61">Landsman, N. P. (2008). "The Born rule and its interpretation" (PDF). In Weinert, F.; Hentschel, K.; Greenberger, D.; Falkenburg, B. (eds.). Compendium of Quantum Physics. Springer. ISBN 978-3-540-70622-9. The conclusion seems to be that no generally accepted derivation of the Born rule has been given to date, but this does not imply that such a derivation is impossible in principle.</li>
+          <li id="ref62">Kent, Adrian (2010). "One world versus many: The inadequacy of Everettian accounts of evolution, probability, and scientific confirmation". In S. Saunders; J. Barrett; A. Kent; D. Wallace (eds.). Many Worlds? Everett, Quantum Theory and Reality. Oxford University Press. arXiv:0905.0624. Bibcode:2009arXiv0905.0624K.</li>
+          <li id="ref63">Goldstein, Sheldon (2017). "Bohmian Mechanics". In Zalta, Edward N. (ed.). Stanford Encyclopedia of Philosophy. Metaphysics Research Lab, Stanford University.</li>
+        </ol>
+
+      </section>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.card-container {
+  position: relative;
+  padding: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    #bbbbbb,
+    #c8c8c8,
+    #d4d4d4,
+    #e1e1e1,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #e1e1e1,
+    #d4d4d4,
+    #c8c8c8,
+    #bbbbbb
+  );
+  width: 260px;
+  height: 355px;
+}
+
+.pokemon-data {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(
+    138deg,
+    rgba(58, 180, 98, 1) 0%,
+    rgba(31, 253, 29, 1) 50%,
+    rgba(216, 252, 69, 1) 100%
+  );
+}
+
+.name-container {
+  display: flex;
+}
+
+.card-type {
+  width: 45px;
+  height: 20px;
+  color: grey;
+  font-style: italic;
+  font-size: 10px;
+  font-weight: 600;
+  border: 3px outset rgb(212, 212, 212);
+  border-radius: 0px 0px 20px 0px;
+  background: linear-gradient(
+    to bottom,
+    #bbbbbb,
+    #c8c8c8,
+    #d4d4d4,
+    #e1e1e1,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #e1e1e1,
+    #d4d4d4,
+    #c8c8c8,
+    #bbbbbb
+  );
+}
+
+.pokemon-name {
+  border-radius: 3px;
+  width: 55%;
+  height: 30px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hp {
+  width: 30%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.hp-text {
+  padding-top: 17px;
+  font-size: 10px;
+}
+
+.sprite-container {
+  background-color: rgb(79, 79, 79);
+  display: flex;
+  justify-content: center;
+  border: 3px ridge rgb(212, 212, 212);
+  margin: 0 auto;
+  width: 220px;
+  height: 140px;
+}
+
+.physical-attribute {
+  border: 3px outset rgb(212, 212, 212);
+  background: linear-gradient(
+    to bottom,
+    #bbbbbb,
+    #c8c8c8,
+    #d4d4d4,
+    #e1e1e1,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #e1e1e1,
+    #d4d4d4,
+    #c8c8c8,
+    #bbbbbb
+  );
+  border-radius: 10px 0px 20px 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 14px;
+  font-size: 8px;
+}
+
+.skill-attribute {
+  padding: 10px;
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0px 0px 0px 5px;
+  margin: 0 auto;
+  width: 230px;
+  height: 120px;
+}
+
+.attack,
+.defense,
+.special-attack,
+.special-defense,
+.speed {
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar-one,
+.bar-two {
+  width: 230px;
+  margin: 0 auto 5px auto;
+  border: 2px outset rgb(212, 212, 212);
+  background: linear-gradient(
+    to bottom,
+    #bbbbbb,
+    #c8c8c8,
+    #d4d4d4,
+    #e1e1e1,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #eeeeee,
+    #e1e1e1,
+    #d4d4d4,
+    #c8c8c8,
+    #bbbbbb
+  );
+}
+
+.card-container p {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  text-align: center; /* Optional: Center align the text */
+  font-size: 6px;
+}

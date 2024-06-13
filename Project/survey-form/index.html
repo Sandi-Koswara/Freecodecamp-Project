@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty of Mathematics and Natural Sciences student exit survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+    <h1 id="title">Faculty of Mathematics and Natural Sciences student exit survey</h1>
+    <p id="description">The purpose of this survey is to collect feedback from students who are graduating from the Faculty of Mathematics and Natural Sciences</p>
+    <!-- Biodata -->
+    <label id="name-label" for="name">Enter your full name: <input id="name" type="text" placeholder="name" required /></label>
+    <label id="email-label" for="email">Enter your email address: <input id="email" type="email" placeholder="email" required /></label>
+    <label id="number-label" for="number">Graduation year: <input id="number" type="number" min="1900" max="2900" placeholder="number" required /></label>
+    <!-- Educational level -->
+    <label id="edulevel">Educational level:</label>
+    <div class="opt-education">
+      <label for="type1"><input id="type1" type="radio" name="type" class="inline" value="bachelor" checked onclick="showOptions('type1')">Bachelor's Degree</label>
+      <label for="type2"><input id="type2" type="radio" name="type" value="master" class="inline" onclick="showOptions('type2')">Master's Degree</label> 
+      <label for="type3"><input id="type3" type="radio" name="type" value="doctoral" class="inline" onclick="showOptions('type3')">Doctoral Degree</label>
+    </div>
+    <!-- Major option -->
+    <div class="options-container" id="options-container">
+      <label for="dropdown">Select your major:</label>
+      <select id="dropdown">
+      <!-- Placeholder option -->
+    <option value="" disabled selected>(Select one)</option>
+        <!-- Options for Bachelor -->
+        <optgroup id="type1Options" label="">
+          <option value="1">Biology</option>
+          <option value="2">Physics</option>
+          <option value="3">Chemistry</option>
+          <option value="4">Mathematics</option>
+          <option value="5">Statistics</option>
+          <option value="6">Geophysics Engineering</option>
+          <option value="7">Instrumentation</option>
+          <option value="8">Actuarial Science</option>
+        </optgroup>
+
+        <!-- Options for Master -->
+        <optgroup id="type2Options" label="">
+          <option value="9">Biology</option>
+          <option value="10">Physics</option>
+          <option value="11">Chemistry</option>
+          <option value="12">Mathematics</option>
+          <option value="13">Statistics</option>
+        </optgroup>
+
+        <!-- Options for Doctoral -->
+        <optgroup id="type3Options" label="">
+          <option value="14">Biology</option>
+          <option value="15">Physics</option>
+          <option value="16">Chemistry</option>
+          <option value="17">Mathematics</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!--rating of satisfaction -->
+    <label for="rating1">1. How would you rate your overall satisfaction with your experience studying in the university?</label>
+    <div class="stars-container">
+    <label class="centered" for="rating1">Extremely dissatisfied</label>
+      <div class="stars">
+      <input type="radio" id="star5_1" name="rating1" value="5" />
+      <label for="star5_1">&#9733;</label>
+
+      <input type="radio" id="star4_1" name="rating1" value="4" />
+      <label for="star4_1">&#9733;</label>
+
+      <input type="radio" id="star3_1" name="rating1" value="3" />
+      <label for="star3_1">&#9733;</label>
+
+      <input type="radio" id="star2_1" name="rating1" value="2" />
+      <label for="star2_1">&#9733;</label>
+
+      <input type="radio" id="star1_1" name="rating1" value="1" />
+      <label for="star1_1">&#9733;</label>
+    </div>
+    <label class="centered" for="rating1">Extremely satisfied</label>
+    </div>
+    <!-- rating of education value -->
+    <label for="rating2">2. How would you rate the value of the education you received in the university?</label>
+    <div class="stars-container">
+    <label class="centered" for="rating2">Poor</label>
+      <div class="stars">
+      <input type="radio" id="star5_2" name="rating2" value="5" />
+      <label for="star5_2">&#9733;</label>
+
+      <input type="radio" id="star4_2" name="rating2" value="4" />
+      <label for="star4_2">&#9733;</label>
+
+      <input type="radio" id="star3_2" name="rating2" value="3" />
+      <label for="star3_2">&#9733;</label>
+
+      <input type="radio" id="star2_2" name="rating2" value="2" />
+      <label for="star2_2">&#9733;</label>
+
+      <input type="radio" id="star1_2" name="rating2" value="1" />
+      <label for="star1_2">&#9733;</label>
+    </div>
+    <label class="centered" for="rating2">Excellent</label>
+    </div>
+    <!-- agree or disagree question one-->
+    <label for="satisfaction-question-one">3. How strongly do you agree or disagree with each of the following?</lable>
+    <table id="table-one">
+      <thead>
+        <tr>
+          <th style="width:25%"></th>
+          <th>Strongly Disagree</th>
+          <th>Disagree</th>
+          <th>Neither Agree nor Disagree</th>
+          <th>Agree</th>
+          <th>Strongly Agree</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The university offers a full array of degree opportunities</td>
+          <td><input type="radio" name="q1_1" value="strongly-disagree"></td>
+          <td><input type="radio" name="q1_1" value="disagree"></td>
+          <td><input type="radio" name="q1_1" value="neither-agree-nor-disagree"></td>
+          <td><input type="radio" name="q1_1" value="agree"></td>
+          <td><input type="radio" name="q1_1" value="strongly-agree"></td>
+        </tr>
+        <tr>
+          <td>The university professors are committed classroom teachers</td>
+          <td><input type="radio" name="q2_1" value="strongly-disagree"></td>
+          <td><input type="radio" name="q2_1" value="disagree"></td>
+          <td><input type="radio" name="q2_1" value="neither-agree-nor-disagree"></td>
+          <td><input type="radio" name="q2_1" value="agree"></td>
+          <td><input type="radio" name="q2_1" value="strongly-agree"></td>
+        </tr>
+        <tr>
+          <td>The university professors are available and committed to mentoring students</td>
+          <td><input type="radio" name="q3_1" value="strongly-disagree"></td>
+          <td><input type="radio" name="q3_1" value="disagree"></td>
+          <td><input type="radio" name="q3_1" value="neither-agree-nor-disagree"></td>
+          <td><input type="radio" name="q3_1" value="agree"></td>
+          <td><input type="radio" name="q3_1" value="strongly-agree"></td>
+        </tr>
+        <tr>
+          <td>The university is academically challenging</td>
+          <td><input type="radio" name="q4_1" value="strongly-disagree"></td>
+          <td><input type="radio" name="q4_1" value="disagree"></td>
+          <td><input type="radio" name="q4_1" value="neither-agree-nor-disagree"></td>
+          <td><input type="radio" name="q4_1" value="agree"></td>
+          <td><input type="radio" name="q4_1" value="strongly-agree"></td>
+        </tr>
+        <tr>
+          <td>The university is committed to helping each student succeed</td>
+          <td><input type="radio" name="q5_1" value="strongly-disagree"></td>
+          <td><input type="radio" name="q5_1" value="disagree"></td>
+          <td><input type="radio" name="q5_1" value="neither-agree-nor-disagree"></td>
+          <td><input type="radio" name="q5_1" value="agree"></td>
+          <td><input type="radio" name="q5_1" value="strongly-agree"></td>
+        </tr>
+        <tr>
+          <td>The university has provided me with access to support and resources that helped me in meeting the challenges of college life</td>
+          <td><input type="radio" name="q6_1" value="strongly-disagree"></td>
+          <td><input type="radio" name="q6_1" value="disagree"></td>
+          <td><input type="radio" name="q6_1" value="neither-agree-nor-disagree"></td>
+          <td><input type="radio" name="q6_1" value="agree"></td>
+          <td><input type="radio" name="q6_1" value="strongly-agree"></td>
+        </tr>
+      </tbody>
+    </table>  
+    <!-- agree or disagree question two -->
+    <label for="satisfaction-question-two">4. How satisfied are you with each of the following?</lable>
+    <table id="table-two">
+      <thead>
+        <tr>
+          <th style="width:25%"></th>
+          <th>Not at all satisfied</th>
+          <th>Somewhat satisfied</th>
+          <th>Mostly satisfied</th>
+          <th>Completely satisfied</th>
+          <th>Not applicable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dining services</td>
+          <td><input type="radio" name="q1_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q1_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q1_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q1_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q1_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Financial aid services</td>
+          <td><input type="radio" name="q2_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q2_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q2_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q2_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q2_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Health services</td>
+          <td><input type="radio" name="q3_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q3_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q3_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q3_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q3_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Counseling services</td>
+          <td><input type="radio" name="q4_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q4_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q4_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q4_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q4_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>IT services</td>
+          <td><input type="radio" name="q5_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q5_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q5_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q5_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q5_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Disability services</td>
+          <td><input type="radio" name="q6_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q6_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q6_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q6_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q6_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Campus safety</td>
+          <td><input type="radio" name="q7_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q7_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q7_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q7_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q7_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Registrar's office</td>
+          <td><input type="radio" name="q8_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q8_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q8_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q8_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q8_2" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Student accounts</td>
+          <td><input type="radio" name="q9_2" value="not at all satisfied"></td>
+          <td><input type="radio" name="q9_2" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q9_2" value="mostly satisfied"></td>
+          <td><input type="radio" name="q9_2" value="completely satisfied"></td>
+          <td><input type="radio" name="q9_2" value="not applicable"></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- agree or disagree question three -->
+    <label for="satisfaction-question-three">5. How satisfied are you with each of the following?</lable>
+    <table id="table-three">
+      <thead>
+        <tr>
+          <th style="width:25%"></th>
+          <th>Not at all satisfied</th>
+          <th>Somewhat satisfied</th>
+          <th>Mostly satisfied</th>
+          <th>Completely satisfied</th>
+          <th>Not applicable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Career planning</td>
+          <td><input type="radio" name="q1_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q1_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q1_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q1_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q1_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Responsiveness of administration to students' concerns</td>
+          <td><input type="radio" name="q2_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q2_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q2_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q2_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q2_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Academic facilities for your major course(s) of study</td>
+          <td><input type="radio" name="q3_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q3_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q3_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q3_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q3_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Intramural athletics</td>
+          <td><input type="radio" name="q4_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q4_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q4_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q4_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q4_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Intercollegiate athletics</td>
+          <td><input type="radio" name="q5_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q5_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q5_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q5_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q5_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Disability services</td>
+          <td><input type="radio" name="q6_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q6_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q6_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q6_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q6_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Responsiveness of staff to students' concerns and needs</td>
+          <td><input type="radio" name="q7_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q7_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q7_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q7_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q7_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Size of your classes</td>
+          <td><input type="radio" name="q8_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q8_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q8_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q8_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q8_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Campus housing</td>
+          <td><input type="radio" name="q9_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q9_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q9_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q9_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q9_3" value="not applicable"></td>
+        </tr>
+        <tr>
+          <td>Campus life</td>
+          <td><input type="radio" name="q10_3" value="not at all satisfied"></td>
+          <td><input type="radio" name="q10_3" value="somewhat satisfied"></td>
+          <td><input type="radio" name="q10_3" value="mostly satisfied"></td>
+          <td><input type="radio" name="q10_3" value="completely satisfied"></td>
+          <td><input type="radio" name="q10_3" value="not applicable"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Textarea for recommendation  -->
+    <label for="bestExperience">6. What do you consider the best thing about your experience in the university?
+      <textarea id="bestExperience" name="bestExperience" rows="3" cols="30" placeholder="My best experience in the university is..."></textarea>
+    </label>
+    <label for="changes">7. What is one thing about your experience in the university that you would change if you could?
+      <textarea id="changes" name="changes" rows="3" cols="30" placeholder="If I could, I would..."></textarea>
+    </label>
+    <div class="checkbox-container">
+    <input type="checkbox" id="termsCheckbox" name="terms" value="accepted">
+    <label for="termsCheckbox">I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+    <input type="checkbox" id="privacyCheckbox" name="privacy" value="accepted">
+    <label for="privacyCheckbox">I accept the <a href="https://www.freecodecamp.org/news/privacy-policy/">privacy policy</a></label>
+  </div>
+    
+    <!-- Submit button -->
+    <input id="submit" type="submit" value="Submit" />
+  </form>
+  
+  <!-- Javascript for major options -->
+  <script>
+    function showOptions(type) {
+      var optionsContainer = document.getElementById('options-container');
+      var type1Options = document.getElementById('type1Options');
+      var type2Options = document.getElementById('type2Options');
+      var type3Options = document.getElementById('type3Options');
+
+      // Reset options
+      type1Options.style.display = 'none';
+      type2Options.style.display = 'none';
+      type3Options.style.display = 'none';
+
+      // Show options based on the selected type
+      if (type === 'type1') {
+        type1Options.style.display = 'block';
+      } else if (type === 'type2') {
+        type2Options.style.display = 'block';
+      } else if (type === 'type3') {
+        type3Options.style.display = 'block';
+      } 
+
+      // Show or hide the options container
+      optionsContainer.style.display = (type !== 'default') ? 'block' : 'none';
+    }
+
+      // Call showOptions with the default value on page load
+    window.onload = function() {
+    showOptions('type1'); // You can change 'type1' to the default value you want
+    };
+  </script>
+</body>
+</html>
